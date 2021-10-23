@@ -1,14 +1,14 @@
-- name: Lesson12
+- name: Exam
   gather_facts: false
   hosts: [all]
   become: yes
 
   tasks:
 
-    - name: Create lesson12
+    - name: Create exam
       docker_container:
-        name: lesson12
-        image: mdsn/lesson12app1
+        name: exam
+        image: docker2706/examapp1
         pull: true
         state: started
         ports:
